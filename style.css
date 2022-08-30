@@ -70,6 +70,50 @@ div .input-type{
         background: #000;
     }
 }
-@media screen (width: 600px;) {
-    
+@media (prefers-color-schme: light){
+    :root{
+        color: default;
+        background: default;
+    }
+}
+
+ /*////// LOADING SCREEN //////////*/
+
+.loader{
+    display: flex;
+    background: transparent;
+    width: 6rem;
+    height: 5rem;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    gap: 5px;
+    padding: 2px 0px 2px 0px;
+    border-radius: 50%;
+}
+.load{
+    display: grid;
+    width: 1rem;
+    height: 0.9rem;
+    background: red;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+    position: relative;
+
+}
+.load:nth-child(2){
+    background-color: black;
+    border: 0.50px solid red;
+    animation-delay: 150ms;
+}
+
+@keyframes loading{
+    0% {transform: translateY(0px); }
+    20% {transform: translateY(20px);}
+    50% {transform: translateY();}
+    75% {transform: translateY();}
+    100% {transform: translateY();}
 }

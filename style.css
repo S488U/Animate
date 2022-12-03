@@ -1,119 +1,163 @@
-:root{
-    background-color: rgba(33, 33, 33, 95%);
-    color: rgb(0, 255, 0);
-    align-items: center;
-    text-align: center;
-    
+:root {
+	background-color: rgba(33, 33, 33, 95%);
+	color: rgb(0, 255, 0);
+	align-items: center;
+	text-align: center;
 }
 
-.title-text::first-letter{
-    font-size: 48px;
-    color: red;
-}
-span{
-    color: red;
-    animation: blink 1s  ease-in-out infinite;
-    animation: shadow 1s ease-out alternate-reverse infinite;
+.title-text::first-letter {
+	font-size: 48px;
+	color: red;
 }
 
-div .input-type{
-    padding: 5px;
-    font-size: large;
-    background-color: #000;
-    border: 2px solid rgb(0, 255, 0);
-}
-.input-type:first-child{
-    color: red;
-}
-.input-type::placeholder{
-    color: red;
+span {
+	color: red;
+	animation: blink 1s  ease-in-out infinite;
+	animation: shadow 1s ease-out alternate-reverse infinite;
 }
 
-.input-type:nth-child(2){
-    color: rgb(0, 255, 0);
-}
-.input-type:nth-child(2):hover{
-    color: red;
-    border: 2px solid red ;
-    border-radius: 5px;
-
-}
-#dark{
-    display: grid;
-    margin-top: 10px;
-    padding: 2px;
-    
+div .input-type {
+	padding: 5px;
+	font-size: large;
+	background-color: #000;
+	border: 2px solid rgb(0, 255, 0);
 }
 
-@keyframes blink{
-    0% {opacity: 0;}
-    25% {opacity: 0.2;}
-    50% {opacity: 0.5;}
-    75% {opacity: 0.7;}
-    100% {opacity: 1;}
+.input-type:first-child {
+	color: red;
 }
 
-@keyframes shadow{
-    0% {text-shadow:rgb(0, 255, 0)  19px 0px 4px ;}
-    50% {font-size: 32px;}
-    75% {font-size: 48px;}
-    100% {font-size: 14px;}
+.input-type::placeholder {
+	color: red;
 }
 
-#displaying-text{
-    color: rgb(0, 255, 0);
-    font-size: 6rem;
+.input-type:nth-child(2) {
+	color: rgb(0, 255, 0);
 }
-@media (prefers-color-schme: dark){
-    :root{
-        color: white;
-        background: #000;
-    }
+
+.input-type:nth-child(2):hover {
+	color: red;
+	border: 2px solid red;
+	border-radius: 5px;
 }
-@media (prefers-color-schme: light){
-    :root{
-        color: default;
-        background: default;
-    }
+
+#dark {
+	display: grid;
+	margin-top: 10px;
+	padding: 2px;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 0.2;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	75% {
+		opacity: 0.7;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes shadow {
+	0% {
+		text-shadow: rgb(0, 255, 0)  19px 0px 4px;
+	}
+
+	50% {
+		font-size: 32px;
+	}
+
+	75% {
+		font-size: 48px;
+	}
+
+	100% {
+		font-size: 14px;
+	}
+}
+
+#displaying-text {
+	color: rgb(0, 255, 0);
+	font-size: 6rem;
+}
+
+@media (prefers-color-schme: dark) {
+	:root {
+		color: white;
+		background: #000;
+	}
+}
+
+@media (prefers-color-schme: light) {
+	:root {
+		color: inherit;
+		background: default;
+	}
 }
 
  /*////// LOADING SCREEN //////////*/
 
-.loader{
-    display: flex;
-    background: transparent;
-    width: 6rem;
-    height: 5rem;
-    align-items: center;
-    align-content: center;
-    margin: auto;
-    gap: 5px;
-    padding: 2px 0px 2px 0px;
-    border-radius: 50%;
-}
-.load{
-    display: grid;
-    width: 1rem;
-    height: 0.9rem;
-    background: red;
-    align-items: center;
-    align-content: center;
-    margin: auto;
-    border-radius: 50%;
-    animation: loading 1s ease infinite;
-    position: relative;
-
-}
-.load:nth-child(2){
-    background-color: black;
-    border: 0.50px solid red;
-    animation-delay: 150ms;
+.loader {
+	display: flex;
+	background: transparent;
+	width: 6rem;
+	height: 5rem;
+	align-items: center;
+	align-content: center;
+	margin: auto;
+	gap: 5px;
+	padding: 2px 0px 2px 0px;
+	border-radius: 50%;
 }
 
-@keyframes loading{
-    0% {transform: translateY(0px); }
-    20% {transform: translateY(20px);}
-    50% {transform: translateY();}
-    75% {transform: translateY();}
-    100% {transform: translateY();}
+.load {
+	display: grid;
+	width: 1rem;
+	height: 0.9rem;
+	background: red;
+	align-items: center;
+	align-content: center;
+	margin: auto;
+	border-radius: 50%;
+	animation: loading 1s ease infinite;
+	position: relative;
+}
+
+.load:nth-child(2) {
+	background-color: black;
+	border: 0.50px solid red;
+	animation-delay: 150ms;
+}
+
+@keyframes loading {
+	0% {
+		transform: translateY(0px);
+	}
+
+	20% {
+		transform: translateY(20px);
+	}
+
+	50% {
+		transform: translateY();
+	}
+
+	75% {
+		transform: translateY();
+	}
+
+	100% {
+		transform: translateY();
+	}
 }
